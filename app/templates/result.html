@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #a8edea, #fed6e3);
+            margin: 0;
+        }
+        .result-container {
+            text-align: center;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        .result-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .result-container img {
+            max-width: 300px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .result-container p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .result-container a {
+            text-decoration:none; 
+            color:#fff; 
+            background:#ff7f50; 
+            padding:10px 20px; 
+            border-radius:10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result-container">
+        <h1>Prediction Result</h1>
+        <img src="/uploads/{{ filename }}" alt="Uploaded Image">
+        <p>{{ prediction }}</p>
+        <br>
+        <a href="/">Try Again</a>
+    </div>
+
+</body>
+</html>
