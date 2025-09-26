@@ -17,7 +17,7 @@ app.mount("/uploads", StaticFiles(directory="app/uploads"), name="uploads")
 # Hugging Face model
 REPO_ID = "Hari1476ee/dragon-fruit-classifier"
 FILENAME = "model2.keras"
-HF_TOKEN = "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"
+HF_TOKEN = os.environ.get("HF_TOKEN")
 
 if not os.path.exists(FILENAME):
     model_path = hf_hub_download(repo_id=REPO_ID, filename=FILENAME, use_auth_token=HF_TOKEN)
